@@ -1,31 +1,17 @@
 import React from 'react';
-import CompaniesTitle from '../companiesTitle/CompaniesTitle';
-import { Link } from 'react-router'; // ✅ FIXED: use react-router-dom
 
-const Companies = ({ companies }) => {
+const CompaniesTitle = () => {
     return (
-        <div>
-            <CompaniesTitle />
-            <div className='grid grid-cols-1 lg:grid-cols-4 gap-4 mb-4'>
-                {companies.map(company => (
-                    <div key={company.id} className="hero bg-base-200 min-h-screen rounded-2xl"> {/* ✅ key moved here */}
-                        <div className="hero-content text-center flex flex-col items-center">
-                            <Link to={`/companydetails/${company.id}`}>
-                                <div className="flex flex-col items-center gap-2">
-                                    <img src={company.logo} alt={company.name} className="w-20 h-20 object-contain" />
-                                    <p className="mt-2 text-center font-medium text-2xl">{company.name}</p>
-                                </div>
-                            </Link>
-                            <div>
-                                <p className="mt-2 text-center font-medium text-emerald-500">Location: {company.location}</p>
-                                <p className="mt-2 text-center font-medium text-orange-500">{company.industry}</p>
-                            </div>
-                        </div>
-                    </div>
-                ))}
-            </div>
+        <div  className='text-center py-4 lg:py-12'>
+            <h1 className=' text-2xl lg:text-4xl mb-4 font-semibold'>Find Your Dream Job</h1>
+            <p>Discover your next career move with confidence. 
+                Explore thousands of job opportunities from leading global companies.
+                Whether you're looking to<br></br> work remotely or on-site, full-time or freelance 
+                — we've got the right job waiting for you
+                </p>
+            
         </div>
     );
 };
 
-export default Companies;
+export default CompaniesTitle;
