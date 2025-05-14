@@ -9,8 +9,8 @@ const Banner = () => {
             className=" rounded-lg "
           />
           <div>
-            <h1 className="  text-3xl lg:text-4xl font-bold">Launch Your Career!</h1>
-            <p className="py-6">
+            <h1 className=" text-blue-400 text-3xl lg:text-4xl font-bold">Launch Your Career!</h1>
+            <p className="text-gray-600 py-6">
             We bring you closer to the companies shaping the future.
              Explore job opportunities that truly match your ambitions.
             </p>

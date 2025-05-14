@@ -16,6 +16,7 @@ import Contact from './pages/contact/Contact';
 import About from './pages/about/About';
 import AuthProvider from './context/AuthProvider';
 import CompanyDetails from './component/company/CompanyDetails';
+import Apply from './pages/apply/Apply';
 
 const router = createBrowserRouter([
   {
@@ -30,15 +31,11 @@ const router = createBrowserRouter([
 
       },
       {
-        path: '/login',
-        Component: Login
+        path: '/apply',
+        Component: Apply
 
       },
-      {
-        path: '/register',
-        Component: Register
-
-      },
+     
       {
         path: '/contact',
         Component: Contact
@@ -55,6 +52,16 @@ const router = createBrowserRouter([
         Component: CompanyDetails,
         hydrateFallbackElement: <p>Loading, please wait.......</p>,
         loader: () => fetch('../data.json').then(res => res.json()),
+
+      },
+      {
+        path: '/login',
+        Component: Login
+
+      },
+      {
+        path: '/register',
+        Component: Register
 
       },
 

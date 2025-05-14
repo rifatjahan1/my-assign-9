@@ -8,6 +8,7 @@ const Navbar = () => {
   // console.log('nav',userInfo)
   const links = <>
     <li ><NavLink to="/">Home</NavLink></li>
+    <li ><NavLink to="/apply">All-Apply</NavLink></li>
     <li ><NavLink to="/about">About</NavLink></li>
     <li ><NavLink to="/contact">Contact</NavLink></li>
 
@@ -30,7 +31,7 @@ const Navbar = () => {
               <li ><NavLink to="/register">Register</NavLink></li>
             </ul>
           </div>
-          <a className=" font-bold text-3xl text-fuchsia-500">jobPortal</a>
+          <a className=" font-bold text-3xl text-blue-500">jobPortal</a>
         </div>
         <div className="navbar-center">
          
