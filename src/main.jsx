@@ -15,35 +15,44 @@ import Register from './component/register/Register';
 import Contact from './pages/contact/Contact';
 import About from './pages/about/About';
 import AuthProvider from './context/AuthProvider';
+import CompanyDetails from './component/company/CompanyDetails';
 
 const router = createBrowserRouter([
   {
     path: "/",
     Component: Root,
-    children:[
+    children: [
       {
-        index:true,
-        Component:Home
-      },
-      {
-        path: 'login',
-        Component:Login
+        index: true,
+        Component: Home,
+        hydrateFallbackElement: <p>Loading, please wait.......</p>,
+        loader: () => fetch('../data.json').then(res => res.json()),
 
       },
       {
-        path: 'register',
-        Component:Register
+        path: '/login',
+        Component: Login
 
       },
       {
-        path: 'contact',
-        Component:Contact
+        path: '/register',
+        Component: Register
+
+      },
+      {
+        path: '/contact',
+        Component: Contact
 
       },
 
       {
-        path: 'about',
-        Component:About
+        path: '/about',
+        Component: About
+
+      },
+       {
+        path: '/companydetails/:id',
+        Component: CompanyDetails
 
       },
 
@@ -55,7 +64,7 @@ const router = createBrowserRouter([
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <AuthProvider>
-        <RouterProvider router={router} />
+      <RouterProvider router={router} />
     </AuthProvider>
   </StrictMode>,
 )
