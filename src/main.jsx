@@ -17,11 +17,13 @@ import About from './pages/about/About';
 import AuthProvider from './context/AuthProvider';
 import CompanyDetails from './component/company/CompanyDetails';
 import Apply from './pages/apply/Apply';
+import ErrorPage from './pages/ErrorPage';
 
 const router = createBrowserRouter([
   {
     path: "/",
     Component: Root,
+    errorElement:<ErrorPage></ErrorPage>,
     children: [
       {
         index: true,
