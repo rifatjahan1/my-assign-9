@@ -14,6 +14,7 @@
           "location": "Remote",
           "salary": "$70,000 - $90,000",
           "jobType": "Full-time",
+          "time":"9A.M - 6P.M",
           "description": "Develop and maintain front-end features for our SaaS platform.",
           "requirements": [
             "Proficient in HTML, CSS, and JavaScript",
@@ -40,6 +41,7 @@
           "location": "Austin, TX",
           "salary": "$85,000 - $105,000",
           "jobType": "Full-time",
+          "time":"9A.M - 6P.M",
           "description": "Build and maintain secure, scalable backend services.",
           "requirements": [
             "Strong knowledge of Node.js or Python",
@@ -66,6 +68,7 @@
           "location": "Berlin, Germany",
           "salary": "€50,000 - €70,000",
           "jobType": "Full-time",
+          "time":"9A.M - 6P.M",
           "description": "Analyze renewable energy data and support decision-making processes.",
           "requirements": [
             "Experience with SQL and data visualization tools",
@@ -92,6 +95,7 @@
           "location": "Remote",
           "salary": "£60,000 - £80,000",
           "jobType": "Full-time",
+          "time":"9A.M - 6P.M",
           "description": "Manage the roadmap and features of our online learning platform.",
           "requirements": [
             "3+ years experience in product management",
@@ -118,6 +122,7 @@
           "location": "Detroit, MI",
           "salary": "$100,000 - $130,000",
           "jobType": "Full-time",
+          "time":"9A.M - 6P.M",
           "description": "Develop and deploy machine learning models for autonomous vehicles.",
           "requirements": [
             "Strong knowledge of Python and TensorFlow/PyTorch",
@@ -144,6 +149,7 @@
           "location": "Remote",
           "salary": "€45,000 - €60,000",
           "jobType": "Full-time",
+          "time":"9A.M - 6P.M",
           "description": "Develop and maintain Android and iOS apps for travel booking.",
           "requirements": [
             "Flutter or React Native experience",
@@ -170,6 +176,7 @@
           "location": "New York, NY",
           "salary": "$95,000 - $120,000",
           "jobType": "Full-time",
+          "time":"9A.M - 6P.M",
           "description": "Design CI/CD pipelines and manage cloud infrastructure.",
           "requirements": [
             "AWS, Docker, Kubernetes experience",
@@ -196,6 +203,7 @@
           "location": "Los Angeles, CA",
           "salary": "$50,000 - $65,000",
           "jobType": "Full-time",
+          "time":"9A.M - 6P.M",
           "description": "Edit high-quality video content for online streaming platforms.",
           "requirements": [
             "Proficiency in Adobe Premiere and After Effects",

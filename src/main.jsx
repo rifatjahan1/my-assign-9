@@ -50,9 +50,11 @@ const router = createBrowserRouter([
         Component: About
 
       },
-       {
+      {
         path: '/companydetails/:id',
-        Component: CompanyDetails
+        Component: CompanyDetails,
+        hydrateFallbackElement: <p>Loading, please wait.......</p>,
+        loader: () => fetch('../data.json').then(res => res.json()),
 
       },
 
