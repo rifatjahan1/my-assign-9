@@ -1,5 +1,8 @@
 import React from 'react';
 import { useEffect, useRef } from "react";
+import { addFavorite } from '../../utils';
+import { Link } from 'react-router';
+
 
 const JobModal = ({ job, onClose }) => {
   const dialogRef = useRef(null);
@@ -11,8 +14,13 @@ const JobModal = ({ job, onClose }) => {
   }, [job]);
 
   if (!job) return null;
-    return (
-        <dialog
+  const handleFavorite = () => {
+    addFavorite(job)
+  }
+
+
+  return (
+    <dialog
       ref={dialogRef}
       className="rounded-xl p-6 w-full max-w-xl backdrop:bg-black/50"
       onClose={onClose}
@@ -26,7 +34,9 @@ const JobModal = ({ job, onClose }) => {
         </button>
       </form>
 
-      <img src={job.bannerImage} alt={job.title} className="w-full h-40 object-cover rounded mb-4" />
+      <div className='bg-center bg-no-repeat'>
+        <img src={job.bannerImage} alt={job.title} className="w-full  h-64 object-cover rounded mb-4" />
+      </div>
       <h2 className="text-2xl font-bold mb-2">{job.title}</h2>
       <p className="text-gray-700 mb-1">{job.jobType} · {job.location}</p>
       <p className="text-gray-500 mb-4">{job.salary}</p>
@@ -37,14 +47,10 @@ const JobModal = ({ job, onClose }) => {
         ))}
       </ul>
       <div className="flex justify-between">
-        <a
-          href={job.applyLink || "#"}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
-        >
-          Apply
-        </a>
+        <Link to='/apply'>
+           <button onClick={handleFavorite} className=' btn text-md lg:text-xl  py-2 pt-1 rounded-full bg-[rgb(14,161,6)] text-white'>
+          Apply</button>
+        </Link>
         <form method="dialog">
           <button className="text-gray-600 px-4 py-2 hover:text-black" onClick={onClose}>
             Close
@@ -52,7 +58,7 @@ const JobModal = ({ job, onClose }) => {
         </form>
       </div>
     </dialog>
-    );
+  );
 };
 
 export default JobModal;

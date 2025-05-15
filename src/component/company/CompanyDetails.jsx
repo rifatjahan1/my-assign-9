@@ -7,7 +7,7 @@ const CompanyDetails = () => {
     const { id } = useParams()
 
     const company = data.find(value => value.id === id);
-    console.log(company)
+    
     const [selectedJob, setSelectedJob] = useState(null);
 
     if (!company) return <div className="p-6">Company not found.</div>;

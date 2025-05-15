@@ -18,6 +18,10 @@ import AuthProvider from './context/AuthProvider';
 import CompanyDetails from './component/company/CompanyDetails';
 import Apply from './pages/apply/Apply';
 import ErrorPage from './pages/ErrorPage';
+ import { ToastContainer, toast } from 'react-toastify';
+  
+
+
 
 const router = createBrowserRouter([
   {
@@ -76,6 +80,7 @@ createRoot(document.getElementById('root')).render(
   <StrictMode>
     <AuthProvider>
       <RouterProvider router={router} />
+    <ToastContainer />
     </AuthProvider>
   </StrictMode>,
 )
